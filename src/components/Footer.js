@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-   <section className="section section-footer">
+   <section className="section navbar">
      <div className="footer-menu">
-       <ul className="footer-menu_list">
+       <ul className="nav-links">
          <li><Link to = '#'>ursa materials</Link></li>
          <li><Link to = '#'>useful services</Link></li>
          <li><Link to = '#'>material library</Link></li>
