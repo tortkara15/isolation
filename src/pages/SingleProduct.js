@@ -4,7 +4,7 @@ import React from 'react';
 
 function SingleProduct() {
   return (
-    <div className="mainPage">
+    <div className="section-product section">
       <div className="item">
         <p>Product</p>
       </div>

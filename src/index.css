@@ -4,9 +4,3 @@
     src: local('roboto-slab'), url(./fonts/RobotoSlab-VariableFont_wght.ttf), format('true-type');
 }
 
-/*styles*/
-*, *::after, *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}

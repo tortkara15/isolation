@@ -12,16 +12,18 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <BrowserRouter>
-    <Header/>
+    
+<BrowserRouter>
+<Header/>
     <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/product" element={<SingleProduct />} />
         <Route path="/products" element={<ProductList />} />
         <Route path="/*" element={<Error />} />
     </Routes>
-    <Footer/>
+    <Footer />
   </BrowserRouter>
+   
   );
 }
 export default App;
