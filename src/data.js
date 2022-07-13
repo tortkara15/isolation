@@ -1,9 +1,9 @@
-
-const products = [
+import FirstImg from '../src/assets/mainSliderImg/house-g5b082d27e_1920.jpg'
+const sliderImage = [
     {id:1, 
     name: 'ursa terra pro 34 PN',
     category: 'ursa terra', 
-    img: 'https://www.ursa.ru/upload/iblock/1f1/1f11197bcc0324ff9115d2df7a0be8e4.png',
+    img: FirstImg,
     textTitle: 'Негорючая минеральная тепло- и звукоизоляция.', 
     mainText: "Материал, произведенный с применением модернизированного полимерного связующего TERRA, предназначен для профессионального домостроения.URSA TERRA PRO отличается высокой упругостью, усиленной влагостойкостью и обладает отличными теплоизоляционными характеристиками в своем классе. Рекомендован для использования строительными бригадами и частными застройщиками. Материал безопасен для человека и окружающей среды."
     
@@ -19,7 +19,7 @@ const products = [
 {id:3, 
     name: 'ursa terra pro 36 PN',
     category: 'ursa terra', 
-    img: 'https://www.ursa.ru/upload/iblock/1f1/1f11197bcc0324ff9115d2df7a0be8e4.png',
+    img: FirstImg,
     textTitle: 'Негорючая минеральная тепло- и звукоизоляция.', 
     mainText: "Материал, произведенный с применением модернизированного полимерного связующего TERRA, предназначен для профессионального домостроения. URSA TERRA PRO отличается высокой упругостью, усиленной влагостойкостью и обладает отличными теплоизоляционными характеристиками в своем классе. Рекомендован для использования строительными бригадами и частными застройщиками. Материал безопасен для человека и окружающей среды.",
     
@@ -50,4 +50,4 @@ const products = [
 //     {iconTitle:'Негорючесть', iconImg: 'https://www.ursa.ru/upload/uf/2f9/2f9104103e5df1b90e9c3d5a8ff26dfe.png'}
 // ];
 
-export default products;
+export default sliderImage;
