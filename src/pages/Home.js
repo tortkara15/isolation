@@ -4,7 +4,7 @@ import SecondSlider from '../components/SecondSlider';
 import Questions from '../components/Questions';
 function Home() {
   return (
-    <section className="section-home">
+    <section className="section section-home">
       <div className="mainSlider">
         <MainSlider/>
       </div>
