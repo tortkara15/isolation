@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {FaBars} from "react-icons/fa";
-import Logo from '../assets/logo192.png'
+import Logo from '../assets/logo192.png';
+import DropMenu from './DropMenu';
 
 
 function Header() {
@@ -21,6 +22,7 @@ function Header() {
           <li><Link to='#'>ПОЧЕМУ URSA</Link></li>
           <li><Link to='#'><FaBars/></Link></li>
         </ul>
+        <DropMenu/>
       </div>
     </section>
   );

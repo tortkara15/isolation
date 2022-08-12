@@ -184,6 +184,28 @@ Variables
     padding: 0.25rem 0.5rem;
     transition: var(--mainTransition);
     color: #232f61;
+    
+  }
+   .dropmenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    position: absolute;
+    top: 113px;
+    left: 0;
+    background-color: #fff;
+    color: #232f61;
+    height: 80vh;
+    transform: translateY(-200%);
+    opacity: 0; 
+  } 
+   .dropmenu-active {
+    transform: translateY(0);
+    opacity: 1;
+  } 
+  .dropContent {
+    padding: 50px;
   }
   .nav-links li:last-child {
     margin-top: 5px;
@@ -281,38 +303,63 @@ Variables
   Form
   ======
   */
-  .search {
-    margin-top: 1rem;
-    padding-bottom: 0;
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+ .form-inner {
+  margin-top: 130px;
+  background-color: #fff;
+  color: #232f61;
+  height: 70vh;
+  width: 50%;
+  border: 1px solid #fff;
+  box-shadow: var(--lightShadow);
+  padding: 20px 50px;
+  border-radius: 5%;
+  margin-bottom: 40px;
   
-  .search-form {
-    width: var(--smallWidth);
-    margin: 0 auto;
-    max-width: var(--maxWidth);
-    background: var(--mainWhite);
-    padding: 2rem 2.5rem;
-    text-transform: capitalize;
-    border-radius: var(--mainBorderRadius);
-    box-shadow: var(--lightShadow);
-  }
-  
-  .form-control label {
-    display: block;
-    margin-bottom: 1.25rem;
-    font-weight: bold;
-    letter-spacing: 0.25rem;
-    color: var(--primaryColor);
-  }
-  .form-control input {
-    width: 100%;
-    border: none;
-    border-color: transparent;
-    background: var(--mainBackground);
-    border-radius: var(--mainBorderRadius);
-    padding: 0.5rem;
-    font-size: 1.2rem;
-  }
+ }
+ .form-title {
+  color: #232f61;
+  font-weight: 500;
+  line-height: 1;
+  font-size: 1.6rem;
+  text-transform: none;
+  margin-bottom: calc(1.2rem - .2em);
+ }
+ .form-control {
+  margin-bottom: 20px;
+  width: 500px;
+ }
+ .form-control input {
+  border:none;
+  border-bottom: 2px solid #232f61;
+  width: 500px;
+ }
+ /* .form-control input::selection {
+  border:none;
+  border-bottom: 2px solid #232f61;
+ } */
+ .form-control label {
+font-size: 1.2rem;
+font-weight: 500;
+ }
+ .form-btn {
+  padding: 0.75em 2.25em;
+  background-color: #232f61;
+  border: 3px solid #232f61;
+  border-radius: 100px;
+  font-size: 1em;
+  cursor: pointer;
+  color:#fff;
+}
+.form-btn:hover {
+  background-color: #ea4740;
+border: 3px solid #ea4740;
+}
   /* 
   ====== 
   Slider
@@ -372,21 +419,25 @@ Variables
   .slide-btn {
     padding: 0.75em 2.25em;
     background-color: #ea4740;
-    
-border: 3px solid #ea4740;
-border-radius: 100px;
+    border: 3px solid #ea4740;
+    border-radius: 100px;
     position: absolute;
     left: 10%;
     top: 60%;
     font-size: 1em;
     cursor: pointer;
   }
+  .slide-btn:hover{
+    background-color: #232f61;
+    border: 3px solid #232f61;
+    
+  }
   .slide-btn a {
     color: rgb(255, 255, 255);
   }
   .slide-link {
-    position: absolute;
-    bottom: 10%;
+    position: fixed;
+    bottom: 5%;
     right: 5%;
     font-size: 40px;
     width: 100px;
@@ -422,8 +473,8 @@ border-radius: 100px;
   
   .dot {
     cursor: pointer;
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 1rem;
+    width: 1rem;
     margin: 0px 3px;
     background-color: rgb(255 255 255); 
     border-radius: 50%;

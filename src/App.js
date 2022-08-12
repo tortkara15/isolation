@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Error from './pages/Error';
 import ProductList from './pages/ProductList';
 import SingleProduct from './pages/SingleProduct';
+import Form from './components/Form';
 
 //import components
 import Header from './components/Header';
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path="/product" element={<SingleProduct />} />
         <Route path="/products" element={<ProductList />} />
+        <Route path="/form" element={<Form/>}/>
         <Route path="/*" element={<Error />} />
     </Routes>
     <Footer />
