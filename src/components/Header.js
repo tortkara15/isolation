@@ -1,11 +1,19 @@
-import React from 'react';
+import {React, useState} from 'react';
 import { Link } from 'react-router-dom';
 import {FaBars} from "react-icons/fa";
 import Logo from '../assets/logo192.png';
 import DropMenu from './DropMenu';
 
 
+
 function Header() {
+  const [focus, setFocus] = useState(false);
+  function HandleFocus(){
+setFocus(true);
+  }
+  function HandleLeave() {
+    setFocus(false)
+  }
   return (
     <section className="section navbar">
       <div className="logo">
@@ -14,15 +22,15 @@ function Header() {
       </div>
       <div className="header-menu">
         <ul className="nav-links">
-          <li><Link to='#'>МАТЕРИАЛЫ URSA</Link></li>
-          <li><Link to='#'>ОБЛАСТИ ПРИМЕНЕНИЯ</Link></li>
-          <li><Link to='#'>ПОДБОР МАТЕРИАЛА</Link></li>
-          <li><Link to='#'>БИБЛИОТЕКА</Link></li>
-          <li><Link to='#'>ГДЕ КУПИТЬ</Link></li>
-          <li><Link to='#'>ПОЧЕМУ URSA</Link></li>
-          <li><Link to='#'><FaBars/></Link></li>
+          <li><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}>МАТЕРИАЛЫ URSA</Link></li>
+          <li><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}>ОБЛАСТИ ПРИМЕНЕНИЯ</Link></li>
+          <li><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}>ПОДБОР МАТЕРИАЛА</Link></li>
+          <li><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}>БИБЛИОТЕКА</Link></li>
+          <li><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}>ГДЕ КУПИТЬ</Link></li>
+          <li><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}>ПОЧЕМУ URSA</Link></li>
+          <li><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}><FaBars/></Link></li>
         </ul>
-        <DropMenu/>
+        <DropMenu focus={focus}/>
       </div>
     </section>
   );
