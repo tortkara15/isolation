@@ -13,6 +13,9 @@ Variables
     
     --primaryColor: #476a2e;
     --primaryDarkColor: #232f61;
+    --primaryOrangeColor: #ea4740;
+    --goldColor: rgb(136 115 45);
+    --mainWhite: #fff;
  
     --mainTransition: all 0.3s linear;
     --transition: all 0.8s linear;
@@ -102,7 +105,7 @@ Variables
     width: 50px;
   }
   .logo-title a {
-    color: #bd0303;
+    color: var(--primaryOrangeColor);
   }
   .nav-links {
     display: flex;
@@ -132,17 +135,15 @@ Variables
     position: absolute;
     top: 113px;
     left: 0;
-    background-color: #fff;
+    background-color: var(--mainWhite);
     color: var(--primaryDarkColor);
     height: 80vh;
-    transform: translateY(-200%);
-    opacity: 0; 
+   
   } 
   .dropmenu-active {
     transform: translateY(0);
     opacity: 1;
-   
-    
+    transition: var(--transition);
   } 
   .dropmenu-closed {
     transform: translateY(-200%);
@@ -157,7 +158,7 @@ Variables
     margin-top: 5px;
   }
   .nav-links a:hover {
-    color: red;
+    color: var(--primaryOrangeColor);
     text-decoration: underline;
   }
   
@@ -205,11 +206,11 @@ Variables
   }
  .form-inner {
   margin-top: 130px;
-  background-color: #fff;
+  background-color: var(--mainWhite);
   color: var(--primaryDarkColor);
   height: 70vh;
   width: 50%;
-  border: 1px solid #fff;
+  border: 1px solid var(--mainWhite);
   box-shadow: var(--lightShadow);
   padding: 20px 50px;
   border-radius: 5%;
@@ -248,11 +249,11 @@ font-weight: 500;
   border-radius: 100px;
   font-size: 1em;
   cursor: pointer;
-  color:#fff;
+  color:var(--mainWhite);
 }
 .form-btn:hover {
-  background-color: #ea4740;
-border: 3px solid #ea4740;
+  background-color: var(--primaryOrangeColor);
+border: 3px solid var(--primaryOrangeColor);
 }
   /* 
   ====== 
@@ -295,7 +296,7 @@ border: 3px solid #ea4740;
   .slide-text {
     width: 100%;
     height: 100%;
-    color: rgb(136 115 45);
+    color: var(--goldColor);
     font-size: 40px;
     position: absolute;
     top: 40%;
@@ -312,8 +313,8 @@ border: 3px solid #ea4740;
   }
   .slide-btn {
     padding: 0.75em 2.25em;
-    background-color: #ea4740;
-    border: 3px solid #ea4740;
+    background-color: var(--primaryOrangeColor);
+    border: 3px solid var(--primaryOrangeColor);
     border-radius: 100px;
     position: absolute;
     left: 10%;
@@ -327,7 +328,7 @@ border: 3px solid #ea4740;
     
   }
   .slide-btn a {
-    color: rgb(255, 255, 255);
+    color: var(--mainWhite);
   }
   .slide-link {
     position: fixed;
@@ -336,8 +337,8 @@ border: 3px solid #ea4740;
     font-size: 40px;
     width: 100px;
     height: 100px;
-    background-color: #fff;
-    border: 20px solid #ea4740;
+    background-color: var(--mainWhite);
+    border: 20px solid var(--primaryOrangeColor);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -370,7 +371,7 @@ border: 3px solid #ea4740;
     height: 1rem;
     width: 1rem;
     margin: 0px 3px;
-    background-color: rgb(255 255 255); 
+    background-color: var(--mainWhite); 
     border-radius: 50%;
     display: inline-block;
   }
@@ -381,14 +382,14 @@ border: 3px solid #ea4740;
   
   
    .active-dot {
-    background-color: rgb(136 115 45);
+    background-color: var(--goldColor);
   } 
   
   .slider-container:hover .dot{
-    background-color: rgba(255, 255, 255, 1);
+    background-color: var(--mainWhite);
   }
    .slider-container:hover .active-dot{
-    background-color: rgb(136 115 45)
+    background-color: var(--goldColor);
   } 
   
   
