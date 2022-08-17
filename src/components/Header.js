@@ -14,8 +14,9 @@ setFocus(true);
   function HandleLeave() {
     setFocus(false)
   }
-  return (
-    <section className="section navbar">
+  return ( 
+    <>
+     <section className="section navbar">
       <div className="logo">
         {<img src={Logo} alt="logo" className="logo-img" /> }
         <h2 className="logo-title"><Link to='/'>Profmet</Link> </h2>
@@ -24,15 +25,16 @@ setFocus(true);
         <ul className="nav-links">
           <li><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}>МАТЕРИАЛЫ URSA</Link></li>
           <li><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}>ОБЛАСТИ ПРИМЕНЕНИЯ</Link></li>
-          <li><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}>ПОДБОР МАТЕРИАЛА</Link></li>
+          <li><Link to='#' >ПОДБОР МАТЕРИАЛА</Link></li>
           <li><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}>БИБЛИОТЕКА</Link></li>
-          <li><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}>ГДЕ КУПИТЬ</Link></li>
+          <li><Link to='#'>ГДЕ КУПИТЬ</Link></li>
           <li><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}>ПОЧЕМУ URSA</Link></li>
           <li><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}><FaBars/></Link></li>
         </ul>
-        <DropMenu focus={focus}/>
       </div>
     </section>
+    <DropMenu focus={focus}/>
+    </>
   );
 }
 
