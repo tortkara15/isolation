@@ -4,13 +4,13 @@ import {FaQuestion} from "react-icons/fa";
 
 function SliderContent({ activeIndex, sliderImage }) {
   return (
-    <section className="SliderContent">
+    <section className="sliderContainer">
       {sliderImage.map((slide, index) => (
         <div
           key={index}
           className={index === activeIndex ? "slides active" : "inactive"} 
         >
-          <div>
+          <div className="sliderInner">
           <img className="slide-image" src={slide.img} alt="" />
           <h2 className="slide-title">{slide.textTitle}</h2>
           <h3 className="slide-text">{slide.mainText}</h3>
@@ -18,12 +18,7 @@ function SliderContent({ activeIndex, sliderImage }) {
           <img src={slide.miniImg} alt="" className={slide.miniImg?'slide-miniImg':'inactive'} />
             <Link to='/form' className="slide-link"><FaQuestion/></Link>
           </div>
-          
-            
-          
-          
         </div>
-        
       ))}
     </section>
 

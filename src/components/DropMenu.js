@@ -2,10 +2,10 @@ import React from 'react';
 
 
 
-const DropMenu = ({focus}) => {
+const DropMenu = ({focus, setFocus}) => {
 
 return (
-    <section className={focus?'dropmenu dropmenu-active': 'dropmenu dropmenu-closed'}>
+    <section className={focus?'dropmenu dropmenu-active': 'dropmenu dropmenu-closed'} >
 <div className="dropContent">
         <h2 className="dropTitle">
             sjgfkdjgdk
