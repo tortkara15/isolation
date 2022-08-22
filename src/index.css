@@ -48,6 +48,7 @@ Variables
     line-height: 1.4;
     font-size: 1rem;
     font-weight: 300;
+    position: relative;
   }
   h1,
   h2,
@@ -203,20 +204,31 @@ Variables
   ======
   */
   .form {
-    display: flex;
+    position:absolute;
+    top: -120px;
+    left: 0;
+    height: 200%;
+    width: 100%;
+    display: none;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 4;
+  }
+  .form-active {
+    display: flex;
+  }
+  .form-closed{
+    display: none;
   }
  .form-inner {
   margin-top: 130px;
   background-color: var(--mainWhite);
   color: var(--primaryDarkColor);
-  height: 70vh;
+  height: 90vh;
   width: 50%;
-  border: 1px solid var(--mainWhite);
-  box-shadow: var(--lightShadow);
+  border: 3px solid var(--mainWhite);
+  box-shadow: var(--darkShadow);
   padding: 20px 50px;
   border-radius: 5%;
   margin-bottom: 40px;
@@ -226,9 +238,10 @@ Variables
   color: var(--primaryDarkColor);
   font-weight: 500;
   line-height: 1;
-  font-size: 1.6rem;
+  font-size: 2rem;
   text-transform: none;
-  margin-bottom: calc(1.2rem - .2em);
+  margin-top: 70px;
+  margin-bottom: calc(3rem - .2em);
  }
  .form-control {
   margin-bottom: 20px;
@@ -272,7 +285,7 @@ border: 3px solid var(--primaryOrangeColor);
   .slider-container {
     height: var(--heights);
     width: var(--widths);
-    position: relative;
+    /* position: relative; */
     margin: auto;
     overflow: hidden;
   }
@@ -352,6 +365,12 @@ border: 3px solid var(--primaryOrangeColor);
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .slide-link:hover{
+    font-size: 50px;
+    width: 120px;
+    height: 120px;
+    transition: var(--mainTransition);
   }
   .slide-miniImg {
     width: 200px;

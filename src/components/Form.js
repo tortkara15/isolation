@@ -1,16 +1,35 @@
 import React from "react";
-import {useState} from 'react';
+import {useState, useRef, useEffect} from 'react';
 
-function Form() {
+function Form(props) {
+    
     const [name,setName]=useState('');
     const [email,setEmail]=useState('');
     const [question, setQuestion]=useState('');
+    const ref = useRef('form');
+    const {setShowForm, showForm} = props;
     const handleSubmit = (e) => {
         e.preventDefault();
-    }
+    };
+    
+        useEffect(function (setForm) {
+            
+            const handleOutClick = (event) => {
+                if (ref.current && !ref.current.includes(event.target)) {
+                    setShowForm(false);
+                }
+            };
+
+            document.addEventListener('click', handleOutClick, true);
+            return () => {
+                document.removeEventListener('click', handleOutClick, true);
+            };
+        }, [ref, setShowForm]);
+       
+    
     return (
         <>
-        <article className="form">
+        <article className={showForm?'form-active form':'form form-closed'}>
         <form className="form-inner" onSubmit={handleSubmit}>
             <h2 className="form-title">
                 Задайте вопрос
