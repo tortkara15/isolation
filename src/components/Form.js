@@ -2,7 +2,6 @@ import React from "react";
 import {useState, useRef, useEffect} from 'react';
 
 function Form(props) {
-    
     const [name,setName]=useState('');
     const [email,setEmail]=useState('');
     const [question, setQuestion]=useState('');
@@ -12,25 +11,28 @@ function Form(props) {
         e.preventDefault();
     };
     
-        useEffect(function (setForm) {
+        useEffect(() => {
             
-            const handleOutClick = (event) => {
-                if (ref.current && !ref.current.includes(event.target)) {
-                    setShowForm(false);
+            const handleOutClick = (e) => {
+                if(e.path[0].className!=="form-inner"&& 
+                e.path[1].className!=="form-inner"&&
+                e.path[2].className!=="form-inner"
+                ) {
+                   setShowForm(false)
                 }
             };
 
-            document.addEventListener('click', handleOutClick, true);
+            document.body.addEventListener('click', handleOutClick,true);
             return () => {
-                document.removeEventListener('click', handleOutClick, true);
+                document.body.removeEventListener('click', handleOutClick,true);
             };
-        }, [ref, setShowForm]);
+        }, [ref,setShowForm]);
        
     
     return (
         <>
         <article className={showForm?'form-active form':'form form-closed'}>
-        <form className="form-inner" onSubmit={handleSubmit}>
+        <form ref={ref} className="form-inner" onSubmit={handleSubmit}>
             <h2 className="form-title">
                 Задайте вопрос
             </h2>

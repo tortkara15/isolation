@@ -4,7 +4,7 @@ import {FaQuestion} from "react-icons/fa";
 import Form from "./Form";
 
 function SliderContent({ activeIndex, sliderImage }) {
-  const [showForm, setShowForm] = useState(false);
+ const [showForm, setShowForm] = useState(false);
   function HandleSldBtnClick() {
     setShowForm(true);
   }
