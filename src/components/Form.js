@@ -1,16 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import {useState, useRef, useEffect} from 'react';
 
 function Form(props) {
     const [name,setName]=useState('');
     const [email,setEmail]=useState('');
     const [question, setQuestion]=useState('');
+    const [lead, setLead] = useState([]);
     const ref = useRef('form');
     const {setShowForm, showForm} = props;
     const handleSubmit = (e) => {
         e.preventDefault();
+        if(name&&email&&question) {
+            const person = {name,email,question};
+            setLead((lead) => {
+                return [...lead,person];
+            })
+            setName('');
+            setEmail('');
+            setQuestion('');
+            console.log(lead);
+        } else {
+console.log('empty values');
+        }
+        
     };
-    
         useEffect(() => {
             
             const handleOutClick = (e) => {
@@ -38,15 +51,15 @@ function Form(props) {
             </h2>
             <div className="form-control">
             <label htmlFor="name"> *Имя: </label>
-            <input type="text"id="name" name="name" value={name} />
+            <input type="text"id="name" name="name" value={name} onChange={(e)=>setName(e.target.value)} />
             </div>
             <div className="form-control">
             <label htmlFor="email"> *E-mail: </label>
-            <input type="text"id="email" name="email" value={email}/>
+            <input type="text"id="email" name="email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
             </div>
             <div className="form-control">
             <label htmlFor="question">Вопрос: </label>
-            <input type="text" id="question" name="question" value={question} />
+            <input type="text" id="question" name="question" value={question} onChange={(e)=>setQuestion(e.target.value)} />
             </div>
                <p className="form-text">
                Нажимая кнопку «Отправить» вы подтверждаете, что даете согласие на обработку персональных данных, указанных в данной форме.
