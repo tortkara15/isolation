@@ -214,6 +214,7 @@ Variables
     align-items: center;
     background-color: rgba(255, 255, 255, 0.9);
     z-index: 4;
+    display: none;
   }
   .form-active {
     display: flex;
@@ -386,12 +387,9 @@ border: 3px solid var(--primaryOrangeColor);
     height: 100%;
     position: absolute;
     display: flex;
-    top: 85%;
+    top: 58%;
     left: 5%;
-    
-    /* justify-content: center; */
-
-    z-index: 200;
+    z-index: 2;
   }
   
   .dot {
@@ -406,6 +404,7 @@ border: 3px solid var(--primaryOrangeColor);
   
    .slider-container:hover .dot:hover {
     background-color: rgba(255, 255, 255, 0.5);
+    
   } 
   
   
