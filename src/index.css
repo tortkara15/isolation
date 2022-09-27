@@ -91,7 +91,8 @@ Variables
     justify-content: space-around;
     border-bottom: 2px solid var(--primaryColor);
     box-shadow: var(--lightShadow);
-    z-index: 3;
+    z-index: 4;
+    
   }
   .logo {
     padding-left: 90px;
@@ -125,6 +126,7 @@ Variables
     padding: 0.25rem 0.5rem;
     transition: var(--mainTransition);
     color: var(--primaryDarkColor);
+    position: relative;
     
   }
    .dropmenu {
@@ -138,7 +140,7 @@ Variables
     background-color: var(--mainWhite);
     color: var(--primaryDarkColor);
     height: 80vh;
-    z-index: 2;
+    z-index: -1;
   } 
   .dropmenu-active {
     transform: translateY(0);
@@ -207,14 +209,12 @@ Variables
     position:absolute;
     top: -120px;
     left: 0;
-    height: 200%;
+    height: 120%;
     width: 100%;
-    display: none;
     flex-direction: column;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.9);
-    z-index: 4;
-    display: none;
+    z-index: 5;
   }
   .form-active {
     display: flex;
@@ -286,7 +286,7 @@ border: 3px solid var(--primaryOrangeColor);
   .slider-container {
     height: var(--heights);
     width: var(--widths);
-    /* position: relative; */
+    position: relative; 
     margin: auto;
     overflow: hidden;
   }
@@ -387,7 +387,7 @@ border: 3px solid var(--primaryOrangeColor);
     height: 100%;
     position: absolute;
     display: flex;
-    top: 58%;
+    top: 90%;
     left: 5%;
     z-index: 2;
   }
@@ -428,4 +428,44 @@ border: 3px solid var(--primaryOrangeColor);
   */
   .section-home {
     padding-top: 114px;
+  }
+  /*Second slider*/
+  .secondSlider-content{
+    height: 85vh;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    overflow: hidden;
+  }
+  
+  .secondSlider-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: auto 50px ;
+    margin-top: 21vh;
+  }
+  .secondSliderImg {
+    height: 148px;
+    width: 216px;
+  }
+  .secondSliderTitle {
+    display: inline-block;
+    border-top: 2px solid var(--primaryDarkColor);
+    border-bottom: 2px solid var(--primaryDarkColor);
+    padding: .2em;
+    color: var(--primaryDarkColor);
+    font-size: 1.3rem;
+    line-height: 1;
+    text-decoration: none;
+    text-align: center;
+  }
+  .secondSliderText {
+    margin-top: 20px;
   }

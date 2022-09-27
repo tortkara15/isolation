@@ -31,9 +31,10 @@ setFocus(true);
           <li><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}>ПОЧЕМУ URSA</Link></li>
           <li><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}><FaBars/></Link></li>
         </ul>
+        <DropMenu focus={focus}/>
       </div>
     </section>
-    <DropMenu focus={focus}/>
+    
     </>
   );
 }

@@ -2,7 +2,19 @@ import React from 'react';
 import MainSlider from '../components/MainSlider';
 import SecondSlider from '../components/SecondSlider';
 import Questions from '../components/Questions';
+import {FaQuestion} from "react-icons/fa";
+import Form from "../components/Form";
+import { useState } from "react";
+
 function Home() {
+  const [showForm, setShowForm] = useState(false);
+  function HandleSldBtnClick() {
+    setShowForm(true);
+    window.scrollTo({
+      top:0,
+      behavior:'smooth'
+    })
+  }
   return (
     <section className="section section-home">
       <div className="mainSlider">
@@ -27,6 +39,8 @@ function Home() {
          <img src="http://rosizol.org/" alt="member of Rosisol association" />
       </div>
       </div>
+      <button type="button" onClick={HandleSldBtnClick} className="slide-link"><FaQuestion/></button>
+      <Form showForm={showForm} setShowForm= {setShowForm}/>
     </section>
   );
 }
