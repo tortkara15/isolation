@@ -16,6 +16,7 @@ Variables
     --primaryOrangeColor: #ea4740;
     --goldColor: rgb(136 115 45);
     --mainWhite: #fff;
+    --grey: #c8cbd7;
  
     --mainTransition: all 0.3s linear;
     --transition: all 0.8s linear;
@@ -431,6 +432,7 @@ border: 3px solid var(--primaryOrangeColor);
   }
   /*Second slider*/
   .secondSlider-content{
+    position: relative;
     height: 85vh;
     display: flex;
     flex-direction: row;
@@ -441,19 +443,47 @@ border: 3px solid var(--primaryOrangeColor);
     align-content: center;
     overflow: hidden;
   }
-  
+  .secondSlider-content::after{
+    content: '';
+    height: 100%;
+    width: 200px;
+    background-color: #fff;
+    opacity: 0.8;
+    position: absolute;
+    right: 0;
+
+  }
+  .secondSliderContainer {
+    width: 25%;
+    margin: 0 20px;
+  }
   .secondSlider-inner {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    width: 100%;
-    margin: auto 50px ;
+    width: 400px;
     margin-top: 21vh;
+    text-transform: uppercase;
+    overflow:hidden;
+    
   }
   .secondSliderImg {
     height: 148px;
     width: 216px;
+    position: relative;
+  }
+  .secondSlider-inner::before {
+    content: '';
+    width: 150px;
+    height: 150px;
+    background-color: var(--grey);
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    bottom:155px;
+    left: 20px;
+    
   }
   .secondSliderTitle {
     display: inline-block;
@@ -461,11 +491,29 @@ border: 3px solid var(--primaryOrangeColor);
     border-bottom: 2px solid var(--primaryDarkColor);
     padding: .2em;
     color: var(--primaryDarkColor);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     line-height: 1;
     text-decoration: none;
     text-align: center;
+    letter-spacing: 0.5px;
+    margin-top: 30px;
   }
   .secondSliderText {
-    margin-top: 20px;
+    margin-top: 10px;
+    color: var(--primaryDarkColor);
+    padding-right: 20px;
+    font-size: 0.9rem;
+    font-weight: normal;
   }
+  .secondSliderNext-btn {
+    font-size: 50px;
+    position: absolute;
+    bottom: 200px;
+    background-color: transparent;
+    color: var(--primaryDarkColor);
+    border: none;
+    right: 50px; 
+    z-index: 2;
+  }
+  
+  
