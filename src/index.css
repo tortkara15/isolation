@@ -515,5 +515,45 @@ border: 3px solid var(--primaryOrangeColor);
     right: 50px; 
     z-index: 2;
   }
-  
-  
+  /*News*/
+  .news-content {
+    max-width: 1200px;
+    height: 70vh;
+  }
+
+  .news-title {
+    color: var(--primaryDarkColor);
+    border-bottom: 1px solid var(--primaryDarkColor);
+    text-decoration: none;
+    text-align: start;
+    font-size: 3vw;
+    font-weight: normal;
+    letter-spacing: 0.8px;
+    margin-left: 50px;
+    display: inline;
+   
+  }
+  .news-title:hover {
+    border-bottom: none;
+  }
+  .news-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  .item-list {
+    margin: 0 50px;
+    min-width: 200px;
+  }
+  .news-name, .news-date{
+    color: var(--primaryDarkColor);
+  }
+  .news-date {
+    margin-top: 30px;
+  }
+  .news-name {
+    font-size: 2.5vw;
+    margin-top: 30px;
+  }

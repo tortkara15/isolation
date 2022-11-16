@@ -4,6 +4,7 @@ import SecondSlider from '../components/SecondSlider';
 import Questions from '../components/Questions';
 import {FaQuestion} from "react-icons/fa";
 import Form from "../components/Form";
+import News from "../components/News"
 import { useState } from "react";
 
 function Home() {
@@ -22,6 +23,9 @@ function Home() {
       </div>
       <div className="secondSlider">
         <SecondSlider/>
+      </div>
+      <div className='news'>
+        <News/>
       </div>
       <div className="questions">
         <Questions/>
