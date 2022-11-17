@@ -442,6 +442,7 @@ border: 3px solid var(--primaryOrangeColor);
     justify-content: space-between;
     align-content: center;
     overflow: hidden;
+    
   }
   .secondSlider-content::after{
     content: '';
@@ -456,6 +457,7 @@ border: 3px solid var(--primaryOrangeColor);
   .secondSliderContainer {
     width: 25%;
     margin: 0 20px;
+    margin-left: 50px;
   }
   .secondSlider-inner {
     display: flex;

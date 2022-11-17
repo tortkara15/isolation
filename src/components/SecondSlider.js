@@ -22,7 +22,7 @@ if (index>=item.length-2) {
             return (
   
     <div className="secondSliderContainer" key={id}>
-    <div className="secondSlider-inner" style={{transform:`translateX(-${index*360}px)`}}>
+    <div className="secondSlider-inner" style={{transform:`translateX(-${index*385}px)`}}>
     <img src={img} alt="product" className="secondSliderImg" />
     <h2 className='secondSliderTitle'><Link to='#'>{textTitle}</Link></h2>
     <p className="secondSliderText">{mainText}</p>
