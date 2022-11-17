@@ -557,3 +557,69 @@ border: 3px solid var(--primaryOrangeColor);
     font-size: 2.5vw;
     margin-top: 30px;
   }
+  /*Questions*/
+  .questions-content {
+    color: var(--primaryDarkColor);
+    height: 70vh;
+    width: 100%;
+    background: url(../src/assets/questionsImg/call-center-6290278_1280.jpg) no-repeat left;
+    border-radius: 0 100px 100px 0;
+    width: 80%;
+  }
+  .questions-inner {
+    border-radius: 0 100px 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .questions-header {
+    font-size:3vw;
+    border-bottom: 1px solid black;
+    max-width: fit-content;
+  }
+  .questions-header:hover {
+    border-bottom: none;
+  }
+  .questions-title {
+    margin-top: 10px;
+    font-size: 2vw;
+    line-height: normal;
+    letter-spacing: 0.1px;
+  }
+  .questions-title:hover {
+    border-bottom: 1px solid black;
+    max-width: fit-content;
+  }
+  /*homeText*/
+  .homeText {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: var(--primaryDarkColor);
+    padding-left: 50px;
+    margin-top: 50px;
+  }
+  .homeText-title {
+    font-size: 2.5rem;
+    letter-spacing: 1.2px;
+    line-height: 2;
+  }
+  .homeText-text {
+    width: 800px;
+    font-weight: normal;
+    line-height: 1.5;
+  }
+  .homeIcon_container {
+    display: flex;
+    align-items: center;
+  }
+  .garantyIcon, .rosizolIcon {
+    width: 160px;
+    height: 160px;
+  }
