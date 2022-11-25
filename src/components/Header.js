@@ -21,15 +21,15 @@ setFocus(true);
         {<img src={Logo} alt="logo" className="logo-img" /> }
         <h2 className="logo-title"><Link to='/'>Profmet</Link> </h2>
       </div>
-      <div className="header-menu">
-        <ul className="nav-links">
-          <li><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}>МАТЕРИАЛЫ URSA</Link></li>
-          <li><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}>ОБЛАСТИ ПРИМЕНЕНИЯ</Link></li>
-          <li><Link to='#' >ПОДБОР МАТЕРИАЛА</Link></li>
-          <li><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}>БИБЛИОТЕКА</Link></li>
-          <li><Link to='#'>ГДЕ КУПИТЬ</Link></li>
-          <li><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}>ПОЧЕМУ URSA</Link></li>
-          <li><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}><FaBars/></Link></li>
+      <div className="header-menu ">
+        <ul className="nav-links container">
+          <li className='nav-link'><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}>МАТЕРИАЛЫ URSA</Link></li>
+          <li className='nav-link'><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}>ОБЛАСТИ ПРИМЕНЕНИЯ</Link></li>
+          <li className='nav-link'><Link to='#' >ПОДБОР МАТЕРИАЛА</Link></li>
+          <li className='nav-link'><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}>БИБЛИОТЕКА</Link></li>
+          <li className='nav-link'><Link to='#'>ГДЕ КУПИТЬ</Link></li>
+          <li className='nav-link'><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}>ПОЧЕМУ URSA</Link></li>
+          <li className='nav-link'><Link to='#' onMouseEnter={HandleFocus} onMouseLeave = {HandleLeave}><FaBars/></Link></li>
         </ul>
         <DropMenu focus={focus}/>
       </div>
