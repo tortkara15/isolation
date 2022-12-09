@@ -16,7 +16,7 @@ function SliderContent({ activeIndex, sliderImage }) {
           <img className="slide-image" src={slide.img} alt="" />
           <h2 className="slide-title">{slide.textTitle}</h2>
           <h3 className="slide-text">{slide.mainText}</h3>
-          <button className="slide-btn"><Link to='#'>{slide.btnText}</Link></button>
+          <button className="slide-btn btn"><Link to='#'>Подробнее</Link></button>
           <img src={slide.miniImg} alt="" className={slide.miniImg?'slide-miniImg':'inactive'} />
            
             

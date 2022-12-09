@@ -3,8 +3,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 //import pages
 import Home from './pages/Home';
 import Error from './pages/Error';
-import ProductList from './pages/ProductList';
-import SingleProduct from './pages/SingleProduct';
+import ProductList from './ProductList';
 import Form from './components/Form';
 
 //import components
@@ -16,14 +15,14 @@ function App() {
     
 <BrowserRouter>
 <Header/>
-    {/* <Routes>
+     <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/product" element={<SingleProduct />} />
+        {/* <Route path="/product" element={<Item />} /> */}
         <Route path="/products" element={<ProductList />} />
         <Route path="/form" element={<Form/>}/>
         <Route path="/*" element={<Error />} />
     </Routes>
-  <Footer /> */}
+  <Footer /> 
   </BrowserRouter>
    
   );
